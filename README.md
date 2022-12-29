@@ -50,16 +50,17 @@ The API returns a PNG file that can be saved in a file.
 Here's an example:
 
 ```
-curl "http://localhost:8080/qrcode?txt=http://www.google.com&size=512" --output img.png
+curl "http://localhost:8080/qrcode?txt=https://marcelloraffaele.github.io&size=512" --output qrcode-without-logo.png
 ```
 
 If you need a QR Code with logo overlay, you can use the `/qrcode-overlay` API using the POST method in order to upload the file that you want to use as logo. The image must be in PNG format, it will be resized and overlayed on the generated QR Code.
 For the logo, choose 150x150px size. 
 
 ```
+cd test
 curl "http://localhost:8080/qrcode-overlay" \
     -X POST \
-    -F txt=http://www.google.com \
+    -F txt=https://marcelloraffaele.github.io \
     -F size=512 \
     -F 'file=@"logo.png"' \
     --output qrcode-with-logo.png
