@@ -22,7 +22,7 @@ And run it locally:
 ```
 
 ### Docker
-The image is already present on [Docker Hub](https://hub.docker.com/repository/docker/rmarcello/qr-generator) so yu can use it.
+The image is already present on [Docker Hub](https://hub.docker.com/repository/docker/rmarcello/qr-generator).
 
 Otherwise you can build your own:
 ```
